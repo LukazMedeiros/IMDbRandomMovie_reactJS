@@ -38,7 +38,8 @@ export function Result() {
 
   useEffect(() => {
     getMovieInfo(genre, year).then((data) => {
-      set_id(data.id);
+      console.log(data);
+      // set_id(data.id);
       set_title(data.title);
       set_rating(data.rating);
       set_runtime(data.runtime);
