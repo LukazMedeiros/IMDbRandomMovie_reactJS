@@ -3,6 +3,8 @@ import { MovieDataContext } from "../contexts/movieDataContext.jsx";
 import { SearchContext } from "../contexts/searchContext.jsx";
 import { getImdbMovieData } from "../services/getImdbMovieData.js";
 
+import "../styles/result.scss";
+
 export function MovieById() {
   const [isLoading, set_isLoading] = useState(true);
   const { genre, year } = useContext(SearchContext);

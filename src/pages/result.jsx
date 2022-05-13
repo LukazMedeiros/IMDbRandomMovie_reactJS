@@ -4,6 +4,8 @@ import { SearchContext } from "../contexts/searchContext.jsx";
 import { getImdbId } from "../services/getImdbId.js";
 import { getImdbMovieData } from "../services/getImdbMovieData.js";
 
+import "../styles/result.scss";
+
 export function Result() {
   const [isLoading, set_isLoading] = useState(true);
   const { genre, year } = useContext(SearchContext);
