@@ -1,11 +1,24 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { MovieDataContext } from "../contexts/movieDataContext.jsx";
 import { SearchContext } from "../contexts/searchContext.jsx";
 //
 import { getGenres } from "../services/getGenres.js";
 //
 export function Home() {
   const page = useNavigate();
+  const {
+    set_id,
+    set_title,
+    set_rating,
+    set_genres,
+    set_runtime,
+    set_countries,
+    set_languages,
+    set_description,
+    set_image,
+    set_actors,
+  } = useContext(MovieDataContext);
   const { set_genre, set_year } = useContext(SearchContext);
   const [list_options, set_list_options] = useState([]);
 
@@ -14,8 +27,30 @@ export function Home() {
       set_list_options(genres);
     });
 
+    set_id("");
+    set_title("");
+    set_rating("");
+    set_genres("");
+    set_runtime("");
+    set_countries("");
+    set_languages("");
+    set_description("");
+    set_image("");
+    set_actors("");
+
     return () => {};
-  }, []);
+  }, [
+    set_id,
+    set_title,
+    set_rating,
+    set_genres,
+    set_runtime,
+    set_countries,
+    set_languages,
+    set_description,
+    set_image,
+    set_actors,
+  ]);
 
   function handle_submit(event) {
     event.preventDefault();
