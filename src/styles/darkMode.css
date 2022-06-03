@@ -1,0 +1,20 @@
+[data-theme="light"] {
+  --color: #333;
+  --bg-color: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #333;
+  --color: #fff;
+}
+
+html {
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+input,
+textarea {
+  background-color: var(--bg-color);
+  color: var(--color);
+}

@@ -1,8 +1,8 @@
 @import "_global";
 
 #result {
-  @include flex(flex-start, center);
-  gap: 1rem;
+  // @include flex(flex-start, center);
+  // gap: 1rem;
 
   li {
     @include flex(flex-start, flex-start);

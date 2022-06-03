@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Header } from "../components/header.jsx";
 import { Loading } from "../components/loading.jsx";
 import { MovieDataContext } from "../contexts/movieDataContext.jsx";
 import { SearchContext } from "../contexts/searchContext.jsx";
@@ -82,6 +83,7 @@ export function Result() {
   } else {
     return (
       <div id="result">
+        <Header />
         <div className="image__container">
           <img src={image} alt={`${title} movie poster`} />
         </div>
