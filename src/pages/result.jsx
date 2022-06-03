@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Loading } from "../contexts/loading.jsx";
 import { MovieDataContext } from "../contexts/movieDataContext.jsx";
 import { SearchContext } from "../contexts/searchContext.jsx";
 import { getImdbId } from "../services/getImdbId.js";
@@ -77,7 +78,7 @@ export function Result() {
   ]);
 
   if (isLoading) {
-    return <p>carregando</p>;
+    return <Loading />;
   } else {
     return (
       <div id="result">
