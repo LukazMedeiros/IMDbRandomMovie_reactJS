@@ -1,0 +1,7 @@
+@import "_global";
+
+header {
+  @include flex(center, space-between);
+  height: 5rem;
+  padding: 0 1rem;
+}

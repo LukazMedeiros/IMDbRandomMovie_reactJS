@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Loading } from "../contexts/loading.jsx";
+import { Loading } from "../components/loading.jsx";
 import { MovieDataContext } from "../contexts/movieDataContext.jsx";
 import { SearchContext } from "../contexts/searchContext.jsx";
 import { getImdbId } from "../services/getImdbId.js";

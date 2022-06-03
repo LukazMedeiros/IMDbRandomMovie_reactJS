@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Header } from "../components/header.jsx";
 import { MovieDataContext } from "../contexts/movieDataContext.jsx";
 import { SearchContext } from "../contexts/searchContext.jsx";
 //
@@ -59,6 +60,7 @@ export function Home() {
 
   return (
     <div id="home">
+      <Header />
       <form onSubmit={handle_submit}>
         <div className="form__control">
           <label htmlFor="genre">select a genre</label>
