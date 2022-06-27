@@ -1,0 +1,30 @@
+@import "_global";
+
+#home {
+  height: 100vh;
+  width: 100%;
+
+  main {
+    height: 95vh;
+    @include flex(center, center);
+  }
+}
+
+.form__control {
+  & + .form__control {
+    margin-top: 1rem;
+  }
+
+  input {
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

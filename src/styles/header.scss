@@ -2,7 +2,7 @@
 
 header {
   @include flex(center, space-between);
-  height: 5rem;
+  height: 5vh;
   padding: 0 1rem;
 
   .switch-container {

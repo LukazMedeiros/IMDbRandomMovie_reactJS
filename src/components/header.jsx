@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { darkModeContext } from "../contexts/darkModeContext.jsx";
+
+// import "../../public/logo.png";
 import "../styles/header.scss";
 
 export function Header() {
@@ -25,8 +27,7 @@ export function Header() {
   return (
     <header>
       <Link to="/">
-        <img src="#" alt="#" />
-        home
+        <img src="logo.png" alt="logtipo" width={30} height={30} />
       </Link>
       <div className="switch-container">
         <label htmlFor="switch">Dark mode</label>

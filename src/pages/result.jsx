@@ -54,7 +54,7 @@ export function Result() {
       set_image(data.image);
 
       const actors = data.actors.map((actor) => {
-        return actor.name;
+        return ` ${actor.name}`;
       });
 
       set_actors(actors.join());
@@ -84,42 +84,44 @@ export function Result() {
     return (
       <div id="result">
         <Header />
-        <div className="image__container">
-          <img src={image} alt={`${title} movie poster`} />
-        </div>
-        <div className="info__container">
-          <h1>{title}</h1>
-          <ul>
-            <li>
-              <span>rating</span>
-              <p>{rating}</p>
-            </li>
-            <li>
-              <span>Run Time</span>
-              <p>{runtime}</p>
-            </li>
-            <li>
-              <span>genres</span>
-              <p>{genres}</p>
-            </li>
-            <li>
-              <span>countries</span>
-              <p>{countries}</p>
-            </li>
-            <li>
-              <span>languages</span>
-              <p>{languages}</p>
-            </li>
-            <li>
-              <span>description</span>
-              <p>{description}</p>
-            </li>
-            <li>
-              <span>actors</span>
-              <p>{actors}</p>
-            </li>
-          </ul>
-        </div>
+        <main>
+          <div className="image__container">
+            <img src={image} alt={`${title} movie poster`} />
+          </div>
+          <div className="info__container">
+            <h1>{title}</h1>
+            <ul>
+              <li>
+                <span>rating</span>
+                <p>{rating}</p>
+              </li>
+              <li>
+                <span>Run Time</span>
+                <p>{runtime}</p>
+              </li>
+              <li>
+                <span>genres</span>
+                <p>{genres}</p>
+              </li>
+              <li>
+                <span>countries</span>
+                <p>{countries}</p>
+              </li>
+              <li>
+                <span>languages</span>
+                <p>{languages}</p>
+              </li>
+              <li>
+                <span>description</span>
+                <p>{description}</p>
+              </li>
+              <li>
+                <span>actors</span>
+                <p>{actors}</p>
+              </li>
+            </ul>
+          </div>
+        </main>
       </div>
     );
   }
