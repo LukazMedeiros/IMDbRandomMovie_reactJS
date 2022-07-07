@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Header } from "../components/header.jsx";
 import { Loading } from "../components/loading.jsx";
 import { MovieDataContext } from "../contexts/movieDataContext.jsx";
@@ -32,9 +33,18 @@ export function Result() {
     actors,
     set_actors,
   } = useContext(MovieDataContext);
+  const page = useNavigate();
 
   async function getMovieInfo(genre, year) {
     const id = await getImdbId(genre, year);
+    console.log(id);
+
+    if (!id || id == undefined) {
+      console.log("deu boxta");
+      page("/error");
+      return;
+    }
+
     const movieData = await getImdbMovieData(id);
     window.history.pushState({}, "movie", `/${id}`);
     return movieData;
