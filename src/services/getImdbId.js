@@ -5,7 +5,7 @@ export async function getImdbId(genre, year) {
 
   const options = {
     method: "GET",
-    url: "https://data-imdb1.p.rapidapi.com/titles",
+    url: "https://moviesdatabase.p.rapidapi.com/titles",
     params: {
       info: "mini_info",
       limit: "1",
@@ -15,7 +15,7 @@ export async function getImdbId(genre, year) {
       year,
     },
     headers: {
-      "X-RapidAPI-Host": "data-imdb1.p.rapidapi.com",
+      "X-RapidAPI-Host": "moviesdatabase.p.rapidapi.com",
       "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
     },
   };
